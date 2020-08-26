@@ -12,7 +12,7 @@ sed -i 's/KHADAS_BOARD=.*/KHADAS_BOARD=VIM1/g' $CONFIG
 sed -i 's/DISTRIB_TYPE=.*/DISTRIB_TYPE=server/g' $CONFIG
 source env/setenv.sh config $CONFIG
 sudo rm -rf build/images/.tmp/*
-BUILD_TYPE=release COMPRESS_IMAGE=yes NO_CCACHE=yes make
+BUILD_TYPE=release COMPRESS_IMAGE=yes NO_CCACHE=yes make debs
 sudo rm -rf build/images/*.img
 
 exit

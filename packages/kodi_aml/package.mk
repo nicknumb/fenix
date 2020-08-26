@@ -26,4 +26,10 @@ makeinstall_target() {
 	if [ -d ${DISTRIB_RELEASE}/${DISTRIB_ARCH}/dev ]; then
 		cp -r ${DISTRIB_RELEASE}/${DISTRIB_ARCH}/dev $BUILD_DEBS/$VERSION/$KHADAS_BOARD/${DISTRIBUTION}-${DISTRIB_RELEASE}/kodi
 	fi
+
+	debs=$(ls $BUILD_DEBS/$VERSION/$KHADAS_BOARD/${DISTRIBUTION}-${DISTRIB_RELEASE}/kodi/deps/*.deb)
+	for deb in $debs
+	do
+		echo $deb
+	done
 }
