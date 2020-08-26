@@ -57,9 +57,3 @@ jobs:
           path: |
             ${{ github.workspace }}/build/images/Edge*-gnome-*.img.xz
 
-      - name: 'Upload Debian Packages to GitHub Artifacts'
-        uses: actions/upload-artifact@v2
-        with:
-          name: Debian-Packages-${{ steps.date.outputs.date }}
-          path: |
-            ${{ github.workspace }}/build/images/debs/
